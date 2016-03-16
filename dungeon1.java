@@ -27,14 +27,14 @@ public class dungeon1
         do{
             System.out.println(description[currentRoom]);
             System.out.println();
-            System.out.println("            w) North"); 
-            System.out.println("a) West     p) Quit       d) East");
-            System.out.println("            s) South");
+            System.out.println("            N) North"); 
+            System.out.println("W) West     p) Quit       E) East");
+            System.out.println("            S) South");
             System.out.print("Which exit do you want to take: ");
             char direction = input.next().charAt(0);
             System.out.println();
             
-            if (direction == 'w') {
+            if (direction == 'n' || direction == 'N') {
                 if (exits[currentRoom][0] == -1) {
                     System.out.println("You can not go that way.");
                     System.out.println();
@@ -43,7 +43,7 @@ public class dungeon1
                 currentRoom = exits[currentRoom][0];
                 }
             }
-            else if (direction == 'd') {
+            else if (direction == 'e' || direction == 'E') {
                if (exits[currentRoom][1] == -1) {
                     System.out.println("You can not go that way.");
                     System.out.println();
@@ -52,7 +52,7 @@ public class dungeon1
                 currentRoom = exits[currentRoom][1];
                 }
             }
-            else if (direction == 's') {
+            else if (direction == 's' || direction == 'S') {
                if (exits[currentRoom][2] == -1) {
                     System.out.println("You can not go that way.");
                     System.out.println();
@@ -61,7 +61,7 @@ public class dungeon1
                 currentRoom = exits[currentRoom][2];
                 }
             }
-            else if (direction == 'a') {
+            else if (direction == 'w' || direction == 'W') {
                 if (exits[currentRoom][3] == -1) {
                     System.out.println("You can not go that way.");
                     System.out.println();
@@ -70,12 +70,12 @@ public class dungeon1
                 currentRoom = exits[currentRoom][3];
                 }
             }
-            else if (direction == 'p') {
+            else if (direction == 'p' || direction == 'P') {
                 control = false;
             }
             else{
                 System.out.println("Invalid input.");
             }
-       }while (control == true);    
+        }while (control == true);    
     }
 }
