@@ -1,0 +1,13 @@
++ I really like how you show your prompt
++ Great variable naming
++ Great formatting
++ Nice job figuring out how to get a char datatype as input
+- instead of the magic numbers 0,1,2,3 to index into the exits array to get the connecting room, it is better to use named constants.  This makes the logic more readily understandable.  NORTH=0, EAST=1, WEST=2 SOUTH=3.
+currentRoom = exits[currentRoom][NORTH];
+currentRoom = exits[currentRoom][EAST];
+currentRoom = exits[currentRoom][WEST];
+currentRoom = exits[currentRoom][SOUTH];
+
+Grade: 100
+Bonus:   0
+Final: 110
